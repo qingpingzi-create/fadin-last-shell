@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#13181c">
+  <meta name="description" content="一部以1944年东线坦克战斗为背景的中文互动叙事游戏。">
+  <title>最后一发：达舒科夫卡五小时</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section id="intro" class="intro" aria-labelledby="game-title">
+      <p class="eyebrow">中文互动叙事 · 历史背景文学化改编</p>
+      <h1 id="game-title">最后一发</h1>
+      <p class="subtitle">达舒科夫卡五小时</p>
+      <p class="lead">1944年的冬夜。一辆坦克、三十名步兵、一座敌军占据的村庄。主力部队尚未抵达，而你必须决定：怎样活过黎明。</p>
+      <div class="intro-meta"><span>约 10 分钟</span><span>8 种结局</span><span>可重复游玩</span></div>
+      <button id="start" class="primary">进入坦克</button>
+      <p class="note">本作借鉴苏军坦克指挥员亚历山大·法丁的战斗经历。人物对话、具体场景和分支均为文学创作，不构成历史纪录。</p>
+    </section>
+
+    <section id="game" hidden>
+      <header class="topbar">
+        <div><p class="eyebrow">最后一发</p><h2 id="chapter">午夜命令</h2></div>
+        <button id="restartTop" class="text-button">重新开始</button>
+      </header>
+      <div class="progress"><div id="progressBar"></div></div>
+      <section class="status" aria-label="战斗状态">
+        <div><span>炮弹</span><strong id="ammo">12</strong></div>
+        <div><span>坦克</span><strong id="tank">100</strong></div>
+        <div><span>步兵</span><strong id="infantry">30</strong></div>
+        <div><span>情报</span><strong id="intel">0</strong></div>
+        <div><span>信任</span><strong id="trust">50</strong></div>
+        <div><span>时间</span><strong id="hours">0 / 5</strong></div>
+      </section>
+      <article class="scene">
+        <p id="tag" class="scene-tag"></p>
+        <h1 id="title"></h1>
+        <div id="story" class="story"></div>
+        <p id="hint" class="hint"></p>
+        <div id="choices" class="choices"></div>
+      </article>
+    </section>
+
+    <section id="ending" class="ending" hidden>
+      <p class="eyebrow">推演结束</p>
+      <p id="endingType" class="ending-type"></p>
+      <h1 id="endingTitle"></h1>
+      <p id="endingText" class="ending-text"></p>
+      <div id="summary" class="summary"></div>
+      <button id="restartEnd" class="primary">再次推演</button>
+      <p class="note">战争从不是数字游戏。每条路线都记录了任务、同伴与平民之间的代价。</p>
+    </section>
+  </main>
+  <footer>无需登录 · 游戏进度仅保存在当前浏览器</footer>
+  <script src="game.js"></script>
+</body>
+</html>
+
